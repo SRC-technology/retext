@@ -1,4 +1,5 @@
 {
+  "bsc-flags": ["-bs-g"],
   "name": "retext",
   "sources": [
     {
