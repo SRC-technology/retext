@@ -2,6 +2,14 @@
 world: deps
 	@./node_modules/.bin/bsb -make-world -w -ws _
 
+.PHONY: build
+build: deps
+	@./node_modules/.bin/bsb -make-world
+
+.PHONY: docs
+docs: build
+	@./scripts/mk-docs.sh
+
 .PHONY: deps
 deps:
 	yarn
@@ -24,7 +32,7 @@ dist:
 .PHONY: bundle
 bundle: deps
 	@./node_modules/.bin/rollup \
-		lib/js/src/Index.bs.js \
+		lib/js/src/ReText_Render.bs.js \
 		--file lib/js/src/bundle.js \
 		--format es
 

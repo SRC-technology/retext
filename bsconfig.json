@@ -1,15 +1,22 @@
 {
   "name": "retext",
-  "sources": [{
-    "dir": "src",
-    "subdirs": true
-  }],
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
   "package-specs": {
     "module": "commonjs",
     "in-source": false
   },
   "suffix": ".bs.js",
-  "namespace": true,
-  "bs-dependencies": [],
+  "namespace": false,
+  "bs-dependencies": [
+    "reason-react",
+  ],
+  "reason": {
+    "react-jsx": 2
+  },
   "refmt": 3
 }
